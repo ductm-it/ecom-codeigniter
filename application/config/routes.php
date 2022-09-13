@@ -12,3 +12,8 @@ $route['login-user']['POST'] = 'LoginController/login';
 //dashboard
 $route['dashboard']['GET'] = 'DashboardController/index';
 $route['logout']['GET'] = 'DashboardController/logout';
+
+//brand
+$route['brand/create']['GET'] = 'BrandController/create';
+$route['brand/list']['GET'] = 'BrandController/index';
+

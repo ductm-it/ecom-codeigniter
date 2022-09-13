@@ -17,11 +17,17 @@
                     <?php echo $this->session->userdata('LoggedIn')['username']; ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url('logout');?>">Logout</a>
+                    <a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Logout</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Brand
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo base_url('brand/create'); ?>">Create</a>
+                    <a class="dropdown-item" href="<?php echo base_url('brand/list'); ?>">List</a>
+                </div>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

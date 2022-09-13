@@ -5,16 +5,13 @@ class DashboardController extends CI_Controller
 {
 
     public function checkLogin(){
-        if ($this->session->userdata('LoggedIn')) {
-            redirect(base_url('dashboard'));
-
-        } else {
+        if (!$this->session->userdata('LoggedIn')) {
             redirect(base_url('login'));
-
         }
     }
     public function index()
     {
+            $this->checkLogin();
             $this->load->view('admin_template/header');
             $this->load->view('admin_template/navbar');
             $this->load->view('dashboard/index');
