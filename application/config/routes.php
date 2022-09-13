@@ -9,3 +9,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login']['GET'] = 'LoginController/index';
 $route['login-user']['POST'] = 'LoginController/login';
 
+//dashboard
+$route['dashboard']['GET'] = 'DashboardController/index';
+$route['logout']['GET'] = 'DashboardController/logout';

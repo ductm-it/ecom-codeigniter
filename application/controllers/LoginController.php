@@ -30,7 +30,7 @@ class LoginController extends CI_Controller
                 ];
                 $this->session->set_userdata('LoggedIn',$session_array);
                 $this->session->set_flashdata('success', 'Login successful');
-                redirect(base_url('/'));
+                redirect(base_url('/dashboard'));
             } else {
                 $this->session->set_flashdata('error', 'Login fail');
                 redirect(base_url('login'));
